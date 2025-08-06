@@ -31,4 +31,4 @@ def scrie_status_studenti(dict_note, nume_fisier):
 
 if __name__ == '__main__':
     dict_note = citire_note_studenti("studenti.csv")
-    scrie_status_studenti(dict_note, "studenti_actualizat.csv")
+    scrie_status_studenti(dict_note, "studenti_actualizat.csv") # inca una
