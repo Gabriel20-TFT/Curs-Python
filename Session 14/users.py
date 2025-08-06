@@ -42,7 +42,7 @@ def user_login_normal():
 
 def user_login_dict():
     user_dict = {}
-    user_dict["username"] = input("Enter username: ") # inca una
+    user_dict["username"] = input("Enter username: ")
     user_dict["password"] = input("Enter password: ")
 
     field_names = ["first_name", "last_name", "username", "password", "email"]
