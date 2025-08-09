@@ -15,7 +15,7 @@ def csv_reading(nume_csv, are_coloane=False):
 
 
 def csv_an_castigator(nume_csv):
-    year = input("Enter year: ")
+    year = input("Enter year : ")
 
     with open(nume_csv) as csvfile:
         csvreader = csv.reader(csvfile)
