@@ -42,5 +42,3 @@ if __name__ == '__main__':
     dict_clienti = citire_clienti("clienti.csv")
     dict_comenzi = citire_comenzi("comenzi.csv")
     scrie_rapoarte(dict_clienti, dict_comenzi, "raport.csv")
-
-    print("Salutare din Bucuresti!")
