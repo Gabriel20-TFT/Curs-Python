@@ -9,6 +9,7 @@ class Animal:
 class Mamifer(Animal):
     def __init__(self, nume_specie, varsta, picioare):
         super().__init__(nume_specie, varsta)
+
         self.picioare = picioare
 
     def __str__(self):
