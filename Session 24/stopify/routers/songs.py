@@ -1,6 +1,7 @@
 import csv
 
 from fastapi import APIRouter, HTTPException
+from models import SongCreateModel
 
 router = APIRouter(prefix="/songs", tags=["songs"])
 
@@ -42,7 +43,7 @@ def get_song(song_title: str):
 
 
 @router.post('/create')
-def create_song(title: str, released: str, duration: str, musician_name: str):
+def create_song(song: SongCreateModel):
     field_names = ["id", "title", "released", "duration", "musician_id"]
 
     song_musician = None
@@ -50,7 +51,7 @@ def create_song(title: str, released: str, duration: str, musician_name: str):
     with open('db/musicians.csv', "r", newline="", encoding="utf-8") as csvfile:
         csv_dict_reader = csv.DictReader(csvfile)
         for musician in csv_dict_reader:
-            if musician['name'] == musician_name:
+            if musician['name'] == song.musician_name:
                 song_musician = musician
     if song_musician is None:
         raise HTTPException(status_code=404, detail="Musician not found")
@@ -60,6 +61,6 @@ def create_song(title: str, released: str, duration: str, musician_name: str):
         lines = len(csvfile.readlines())
 
         csv_dict_writer = csv.DictWriter(csvfile, fieldnames=field_names)
-        csv_dict_writer.writerow({"id": lines, "title": title, "released": released, "duration": duration,
+        csv_dict_writer.writerow({"id": lines, "title": song.title, "released": song.released, "duration": song.duration,
                                   "musician_id": song_musician["id"]})
         return "Added song successfully"

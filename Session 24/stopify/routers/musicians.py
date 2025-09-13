@@ -1,6 +1,7 @@
 import csv
 
 from fastapi import APIRouter, HTTPException
+from models import MusicianCreateModel
 
 router = APIRouter(prefix="/musicians", tags=["musicians"])
 
@@ -15,7 +16,7 @@ def get_musicians():
         return musicians
 
 
-@router.get('/{musician_name}')
+@router.get('/get_musician')
 def get_musician(musician_name: str):
     with open('db/musicians.csv', "r", newline="", encoding="utf-8") as csvfile:
         csv_dict_reader = csv.DictReader(csvfile)
@@ -27,7 +28,7 @@ def get_musician(musician_name: str):
 
 
 @router.post('/create')
-def create_musician(name: str, style: str, label: str):
+def create_musician(musician: MusicianCreateModel):
     field_names = ["id", "name", "style", "label"]
 
     with open('db/musicians.csv', "r+", newline="", encoding="utf-8") as csvfile:
@@ -35,5 +36,5 @@ def create_musician(name: str, style: str, label: str):
         lines = len(csvfile.readlines())
 
         csv_dict_writer = csv.DictWriter(csvfile, fieldnames=field_names)
-        csv_dict_writer.writerow({"id": lines, "name": name, "style": style, "label": label})
+        csv_dict_writer.writerow({"id": lines, "name": musician.name, "style": musician.style, "label": musician.label})
         return "Added musician successfully"
