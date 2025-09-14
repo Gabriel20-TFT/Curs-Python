@@ -1,0 +1,11 @@
+name: stopify
+
+
+services:
+  api:
+    build: ./
+    restart: always
+    volumes:
+      - ./:/api
+    ports:
+      - "8001:8000"
