@@ -1,0 +1,51 @@
+book_id,title,genre,author_id
+1,Hamlet,Tragedy,1
+2,Macbeth,Tragedy,1
+3,Pride and Prejudice,Romance,2
+4,Emma,Romance,2
+5,Great Expectations,Fiction,3
+6,Oliver Twist,Fiction,3
+7,Adventures of Huckleberry Finn,Adventure,4
+8,The Adventures of Tom Sawyer,Adventure,4
+9,War and Peace,Historical Fiction,5
+10,Anna Karenina,Romance,5
+11,Crime and Punishment,Philosophical Fiction,6
+12,The Brothers Karamazov,Philosophical Fiction,6
+13,Collected Poems,Poetry,7
+14,Letters of Emily Dickinson,Non-Fiction,7
+15,1984,Dystopian,8
+16,Animal Farm,Political Satire,8
+17,To the Lighthouse,Modernist,9
+18,Orlando,Fiction,9
+19,The Old Man and the Sea,Fiction,10
+20,A Farewell to Arms,War,10
+21,The Great Gatsby,Fiction,11
+22,Tender Is the Night,Fiction,11
+23,Ulysses,Modernist,12
+24,A Portrait of the Artist as a Young Man,Fiction,12
+25,The Trial,Philosophical Fiction,13
+26,The Metamorphosis,Fiction,13
+27,Moby-Dick,Adventure,14
+28,Billy Budd,Adventure,14
+29,The Raven,Poetry,15
+30,The Tell-Tale Heart,Horror,15
+31,The Hobbit,Fantasy,16
+32,The Lord of the Rings,Fantasy,16
+33,The Chronicles of Narnia,Fantasy,17
+34,Mere Christianity,Theology,17
+35,Frankenstein,Horror,18
+36,Valperga,Fiction,18
+37,Little Women,Fiction,19
+38,Good Wives,Fiction,19
+39,To Kill a Mockingbird,Fiction,20
+40,Go Set a Watchman,Fiction,20
+41,Othello,Tragedy,1
+42,King Lear,Tragedy,1
+43,Mansfield Park,Romance,2
+44,Northanger Abbey,Romance,2
+45,David Copperfield,Fiction,3
+46,Bleak House,Fiction,3
+47,Roughing It,Travel,4
+48,The Innocents Abroad,Travel,4
+49,Resurrection,Philosophical Fiction,5
+50,Childhood,Autobiographical Fiction,5

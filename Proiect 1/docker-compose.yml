@@ -1,0 +1,11 @@
+name: veyla
+
+
+services:
+  api:
+    build: ./
+    restart: always
+    volumes:
+      - ./:/api
+    ports:
+      - "8000:8000"
