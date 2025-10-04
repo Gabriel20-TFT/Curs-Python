@@ -3,14 +3,12 @@ from typing import List
 
 import bcrypt
 from sqlalchemy import create_engine, Integer, String, TIMESTAMP, ForeignKey
-from sqlalchemy.orm import DeclarativeBase, Session, Mapped, mapped_column, relationship
+from sqlalchemy.orm import Session, Mapped, mapped_column, relationship, declarative_base
 
 from urllib.parse import quote_plus
 import random
 
-
-class Base(DeclarativeBase):
-    pass
+Base = declarative_base()
 
 
 class SpeciesModel(Base):
